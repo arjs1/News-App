@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/pages/newslistpage/news_list.dart';
+import 'package:news_app/features/news/news_list_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -17,59 +17,53 @@ class _LoginPageState extends State<LoginPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text(
+            const Text(
               "E X P R E S S N E W S",
               style: TextStyle(
-                color: const Color.fromARGB(255, 51, 160, 54),
+                color: Color.fromARGB(255, 51, 160, 54),
                 fontWeight: FontWeight.normal,
                 fontSize: 30.0,
               ),
             ),
             Column(
               children: [
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width / 1.5,
                   height: 40.0,
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: Text(
+                    style: ButtonStyle(
+                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(18.0),
+                        ),
+                      ),
+                      backgroundColor: MaterialStateProperty.all<Color>(
+                          const Color.fromARGB(255, 102, 102, 102)),
+                    ),
+                    child: const Text(
                       "Sign in with Google",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 20,
                       ),
                     ),
-                    style: ButtonStyle(
-                      shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(18.0),
-                        ),
-                      ),
-                      backgroundColor: MaterialStateProperty.all<Color>(
-                          Color.fromARGB(255, 102, 102, 102)),
-                    ),
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                Container(
+                SizedBox(
                   width: MediaQuery.of(context).size.width / 1.5,
                   height: 40.0,
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => NewsList()),
+                        MaterialPageRoute(
+                            builder: (context) => const NewsListPage()),
                       );
                     },
-                    child: Text(
-                      "Sign in as guest",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 20,
-                      ),
-                    ),
                     style: ButtonStyle(
                       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
@@ -77,7 +71,14 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       backgroundColor: MaterialStateProperty.all<Color>(
-                          Color.fromARGB(255, 51, 160, 54)),
+                          const Color.fromARGB(255, 51, 160, 54)),
+                    ),
+                    child: const Text(
+                      "Sign in as guest",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
                     ),
                   ),
                 ),

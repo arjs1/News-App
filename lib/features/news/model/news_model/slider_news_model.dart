@@ -1,10 +1,10 @@
-class NewsModel {
+class SliderNewsModel {
   final String newsImage;
   final String category;
   final String title;
   final String description;
 
-  NewsModel(
+  SliderNewsModel(
       {required this.newsImage,
       required this.category,
       required this.title,

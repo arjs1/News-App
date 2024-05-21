@@ -1,15 +1,15 @@
-import 'package:news_app/pages/newslistpage/model/news_model.dart';
+import 'package:news_app/features/news/model/news_model/slider_news_model.dart';
 
-List<NewsModel> newsmodel = [
-  NewsModel(
-      newsImage: "images/news1.png",
+List<SliderNewsModel> newsmodel = [
+  SliderNewsModel(
+      newsImage: "assets/images/news1.png",
       category: "Religious",
       title:
           " As conservatives put religion in schools, Satanists want in, too",
       description:
           "It's becoming increasingly clear that the end is near in former President Donald Trump's hush money trial in New York City. With the defense having nearly wrapped its cross-examination of Michael Cohen — Trump's former attorney and fixer and a pivotal witness for the prosecution — closing arguments look likely to begin early next week in Manhattan criminal court.As Day 18 of Trump's criminal proceedings wound down Thursday afternoon, state Judge Juan Merchan laid out the road ahead in the heavily scrutinized and historic trial."),
-  NewsModel(
-      newsImage: "images/news2.png",
+  SliderNewsModel(
+      newsImage: "assets/images/news2.png",
       category: "Politics",
       title:
           "Trump trial Day 18 takeaways: Fireworks on the stand as finish line nears",
