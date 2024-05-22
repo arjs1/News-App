@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/core/api/api.dart';
+import 'package:news_app/core/payment/esewa_payment.dart';
 import 'package:news_app/core/utilis/news_data_constant.dart';
 import 'package:news_app/features/news/widgets/image_placeholder.dart';
 import 'package:news_app/features/news/widgets/news_container.dart';
@@ -12,16 +13,7 @@ class NewsListPage extends StatefulWidget {
 }
 
 class _NewsListPageState extends State<NewsListPage> {
-  final Api _api = Api(); // _api
-  final Api _api1 = Api(); //_api1
-
-  void checkApiInstance() {
-    if (_api == _api1) {
-      print("object");
-    } else {
-      print("object1");
-    }
-  }
+  final Api _api = Api();
 
   @override
   Widget build(BuildContext context) {
@@ -57,6 +49,13 @@ class _NewsListPageState extends State<NewsListPage> {
       ),
       body: ListView(
         children: [
+          MaterialButton(
+            color: Colors.green,
+            child: const Text("Esewa"),
+            onPressed: () {
+              EsewaService().useEsewa();
+            },
+          ),
           SizedBox(
             height: 200,
             child: ListView.builder(
