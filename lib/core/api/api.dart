@@ -10,7 +10,6 @@ class Api {
   static final Api _api = Api._sumanConstructor();
 
   factory Api() {
-    print("object");
     return _api;
   }
 
