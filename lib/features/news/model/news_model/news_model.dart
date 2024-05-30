@@ -27,13 +27,13 @@ class NewsModel {
 
   factory NewsModel.fromJson(Map<String, dynamic> json) => NewsModel(
         source: Source.fromJson(json["source"]),
-        author: json["author"],
+        author: json["author"] ?? "",
         title: json["title"] ?? "N/A",
-        description: json["description"],
-        url: json["url"],
-        urlToImage: json["urlToImage"],
-        publishedAt: json["publishedAt"],
-        content: json["content"],
+        description: json["description"] ?? "",
+        url: json["url"] ?? "",
+        urlToImage: json["urlToImage"] ?? '',
+        publishedAt: json["publishedAt"] ?? '',
+        content: json["content"] ?? '',
       );
 
   Map<String, dynamic> toJson() => {
@@ -62,8 +62,8 @@ class Source {
   });
 
   factory Source.fromJson(Map<String, dynamic> json) => Source(
-        id: json["id"],
-        name: json["name"],
+        id: json["id"] ?? "",
+        name: json["name"] ?? "",
       );
 
   Map<String, dynamic> toJson() => {

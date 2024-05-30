@@ -41,6 +41,7 @@ dependencies:
   esewa_flutter_sdk:
     path: ./esewa_flutter_sdk
   flutter_bloc: ^8.1.5
+  equatable: ^2.0.5
 
 dev_dependencies:
   flutter_test:
